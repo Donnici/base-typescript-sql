@@ -1,0 +1,66 @@
+{
+	"name": "typescript-sql",
+	"description": "Base para criação de projetos Typescript",
+	"version": "0.1.0",
+	"main": "dist/src/index.js",
+	"scripts": {
+		"build": "rm -rf ./dist && npm run lint && npm run type && echo Build finished!",
+		"start": "./node_modules/.bin/pm2-runtime start ecosystem.config.js",
+		"lint": "./node_modules/.bin/tslint -c tslint.json --project tsconfig.json --fix",
+		"type": "./node_modules/.bin/tsc",
+		"develop": "nodemon",
+		"develop:watch": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+		"test": "./node_modules/.bin/jest"
+	},
+	"keywords": [],
+	"author": {
+		"email": "bruno.dias.donnici@gmail.com",
+		"name": "Bruno Dias Donnici",
+		"url": "http://brunodonnici.com.br"
+	},
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^8.1.0",
+		"express": "^4.17.1",
+		"lodash": "^4.17.15",
+		"moment": "^2.24.0",
+		"moment-timezone": "^0.5.27",
+		"morgan": "^1.9.1",
+		"pg": "^7.18.1",
+		"pg-hstore": "^2.3.3",
+		"pm2": "^4.3.1",
+		"reflect-metadata": "^0.1.13",
+		"sequelize": "^5.21.4",
+		"sequelize-typescript": "^1.1.0",
+		"swagger-jsdoc": "^3.4.0",
+		"swagger-ui-express": "^4.1.2",
+		"ts-node": "^8.3.0",
+		"tslint": "^5.20.0",
+		"tslint-eslint-rules": "^5.4.0",
+		"typescript": "^3.6.2",
+		"yup": "^0.27.0"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.6",
+		"@types/dotenv": "^6.1.1",
+		"@types/express": "^4.17.1",
+		"@types/jest": "^24.0.18",
+		"@types/lodash": "^4.14.140",
+		"@types/moment": "^2.13.0",
+		"@types/morgan": "^1.7.37",
+		"@types/node": "^12.7.3",
+		"@types/supertest": "^2.0.8",
+		"@types/yup": "^0.26.33",
+		"jest": "^25.1.0",
+		"nodemon": "^2.0.2",
+		"sequelize-cli": "^5.5.1",
+		"supertest": "^4.0.2",
+		"ts-jest": "^24.1.0",
+		"tslint": "^5.20.0",
+		"tslint-eslint-rules": "^5.4.0"
+	},
+	"jest": {
+		"testRegex": "./__test__/**/*.test.ts"
+	}
+}

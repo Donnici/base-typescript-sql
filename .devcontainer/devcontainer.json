@@ -1,0 +1,28 @@
+{
+	"name": "API Typescript Container",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+	"service": "api",
+	"workspaceFolder": "/workspace",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	// "remoteUser": "vscode",
+	// "runServices": [],
+	// "shutdownAction": "none",
+	// "postCreateCommand": "apt-get update && apt-get install -y git",
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"ms-vscode.vscode-typescript-tslint-plugin",
+		"editorconfig.editorconfig",
+		"teelang.vsprettier",
+		"loiane.ts-extension-pack",
+		"hoovercj.vscode-power-mode",
+		"orta.vscode-jest",
+		"eamodio.gitlens",
+		"cardinal90.multi-cursor-case-preserve",
+		"gruntfuggly.todo-tree"
+	]
+}
